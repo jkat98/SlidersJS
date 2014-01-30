@@ -13,10 +13,14 @@ within a bounding box, and report the horizontal value below the slider.
 
 ##Samples
 
+HTML code:
+
     <div id="slider1"></div>
     <div id="slider4"></div>
     <div id="slider2"></div>
     <div id="slider3"></div>
+
+JavaScript code:
 
     var myslider1 = new AWSlider('#slider1');
     var myslider2 = new AWSlider('#slider2', { width: 500 });
