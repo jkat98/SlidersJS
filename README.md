@@ -6,7 +6,7 @@ within a bounding box, and report the horizontal value below the slider.
 
 ##To use:
 
-    var myslider = new AWSlider(selector, [options])
+    var myslider = new SliderJS(selector, [options])
 
 [options] = { width: Npx, initial_value: 0, min_value: 0, max_value: 100, show_values: bool }
  *options object can contain any or all of the parameters
@@ -22,7 +22,7 @@ HTML code:
 
 JavaScript code:
 
-    var myslider1 = new AWSlider('#slider1');
-    var myslider2 = new AWSlider('#slider2', { width: 500 });
-    var myslider3 = new AWSlider('#slider3', { width: 700, initial_value: 100, min_value: 50, max_value: 300, show_values: false });
-    var myslider4 = new AWSlider('#slider4', { width: 600, initial_value: 75, min_value: 25, max_value: 375 });
+    var myslider1 = new SliderJS('#slider1');
+    var myslider2 = new SliderJS('#slider2', { width: 500 });
+    var myslider3 = new SliderJS('#slider3', { width: 700, initial_value: 100, min_value: 50, max_value: 300, show_values: false });
+    var myslider4 = new SliderJS('#slider4', { width: 600, initial_value: 75, min_value: 25, max_value: 375 });

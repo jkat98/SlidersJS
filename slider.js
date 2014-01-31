@@ -3,14 +3,14 @@
 // slider widget.  The slider should be able to scroll horizontally, contained
 // within a bounding box, and report the horizontal value below the slider.
 //
-// To use: var myslider = new AWSlider(selector, [options])
+// To use: var myslider = new SliderJS(selector, [options])
 // [options] = { width: Npx, initial_value: 0, min_value: 0, max_value: 100, show_values: bool }
 // *options object can contain any or all of the parameters
 //
 // Created by: Jason Krol | 6/27/13
 //****************************************************************************/
 
-var AWSlider = function (container, options) {
+var SliderJS = function (container, options) {
     var self = this;
     self.container = container;
     self.options = options;
@@ -42,25 +42,25 @@ var AWSlider = function (container, options) {
         self.slide.onmousedown = function () {
             self.tracking = true;
             self.slide.className += " active";
-            window.AWSlider_cslider = self;
+            window.SliderJS_cslider = self;
         }
         document.onmouseup = function () {
-            window.AWSlider_cslider.tracking = false;
-            window.AWSlider_cslider.slide.className = window.AWSlider_cslider.slide.className.replace("active", "");
+            window.SliderJS_cslider.tracking = false;
+            window.SliderJS_cslider.slide.className = window.SliderJS_cslider.slide.className.replace("active", "");
         }
         document.onmousemove = function (e) {
-            if (typeof window.AWSlider_cslider !== 'undefined') {
-                if (window.AWSlider_cslider.tracking) {
+            if (typeof window.SliderJS_cslider !== 'undefined') {
+                if (window.SliderJS_cslider.tracking) {
                     var x = e.clientX - 30;
-                    if (x > (window.AWSlider_cslider.min_value) && x < (window.AWSlider_cslider.max_value)) {
+                    if (x > (window.SliderJS_cslider.min_value) && x < (window.SliderJS_cslider.max_value)) {
                         //allow it
-                        window.AWSlider_cslider.setPosition(x);
+                        window.SliderJS_cslider.setPosition(x);
                     }
-                    else if (x < window.AWSlider_cslider.min_value) {
-                        window.AWSlider_cslider.setPosition(window.AWSlider_cslider.min_value);
+                    else if (x < window.SliderJS_cslider.min_value) {
+                        window.SliderJS_cslider.setPosition(window.SliderJS_cslider.min_value);
                     }
-                    else if (x > window.AWSlider_cslider.max_value) {
-                        window.AWSlider_cslider.setPosition(window.AWSlider_cslider.max_value);
+                    else if (x > window.SliderJS_cslider.max_value) {
+                        window.SliderJS_cslider.setPosition(window.SliderJS_cslider.max_value);
                     }
                 }
             }
